@@ -8,6 +8,7 @@ import io.swagger.v3.oas.annotations.servers.Server;
 @OpenAPIDefinition(
   info = @Info(
   title = "Book API",
+  version = "1.0.0",
   description = "This is a simple API for managing books...",
     contact = @Contact(
     name = "Your Name", 
