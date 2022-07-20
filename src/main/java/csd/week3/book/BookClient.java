@@ -1,8 +1,6 @@
 package csd.week3.book;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
@@ -11,21 +9,8 @@ public class BookClient {
     
     private RestTemplate template;
     
-    @Autowired
-    void setTemplate(final RestTemplate template) {
-        this.template = template;
-    }
-
-    /**
-     * @Bean: indicates that this method creates a bean, and Spring will add it to the app context
-     * Spring Boot does not auto-configure a RestTemplate by default
-     * @param builder
-     * @return an instance of RestTemplate
-     */
-    @Bean
-    RestTemplate restTemplate(RestTemplateBuilder builder) {
-        // Other configurations here if needed
-        return builder.build();
+    BookClient(RestTemplateBuilder builder) {
+        this.template = builder.build();
     }
 
     /**
