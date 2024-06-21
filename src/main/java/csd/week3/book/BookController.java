@@ -48,7 +48,7 @@ public class BookController {
         // Need to handle "book not found" error using proper HTTP status code
         // In this case it should be HTTP 404
         if(book == null) throw new BookNotFoundException(id);
-        return bookService.getBook(id);
+        return book;
 
     }
     /**
