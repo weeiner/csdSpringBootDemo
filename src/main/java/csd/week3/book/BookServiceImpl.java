@@ -15,6 +15,7 @@ public class BookServiceImpl implements BookService {
         books.add(new Book("To Kill a Mockingbird"));
         books.add(new Book("The Great Gatsby"));
         books.add(new Book("The Diary Of A Young Girl"));
+        books.add(new Book("testing"));
     }
     
     @Override
